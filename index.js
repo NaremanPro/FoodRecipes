@@ -1,49 +1,32 @@
-/*function createNode(element) {
-     return document.createElement(element);
- }
-
- function append(parent, el) {
-   return parent.appendChild(el);
- }
-
- const ul = document.getElementById('MainCurse');
- const url = 'http://www.recipepuppy.com/api/?i=beef&mainCurse&p=3';
- fetch(url)
- .then((resp) => resp.json())
- .then(function(data) {
-   let MainCurse = data.results;
-   return MainCurse.map(function(MainCurse) {
-     let li = createNode('li'),
-     li.innerHTML = "2bleu's Perfect Roast Beef";
-     append(li, li.innerHTML);
-     append(ul, li);
-   })
- })
- .catch(function(error) {
-   console.log(error);
- });*/
-
- // document.getElementById("button").addEventListener("click", getRecipeData);
-
- function getRecipeData () {
-   // event.preventDefault();
-
-   fetch("http://www.recipepuppy.com/api/?i=beef&mainCurse&p=3", {
-     method: 'GET',
-     headers: {
-       'Origin': '*'
-     }
-   })
-   .then(function(response) {
-     return response.text();
-   })
-  .then(function(data) {
-    console.log(data ? JSON.parse(data) : {});
-    //document.getElementById("MainCurse").textContent = data.href;
-  })
-  .catch(function(error) {
-    console.log(error);
-  })
+var nodeList = document.querySelectorAll('button');
+console.log(nodeList);
+function addOptions(event) {
+  // document.getElementById("menu").idList.toggle("show");
+  var result = document.getElementById("result");
+  // function getRecipeData(e) {
+    event.preventDefault();
+        fetch("http://www.recipepuppy.com/api/?i=beef&mainCurse&p=3")
+        .then(function(response) {
+          return response.json();
+        })
+       .then(function(data) {
+         console.log(data);
+         document.getElementById("result").textContent = data.results[9].title;
+         result.href = data.results[9].href;
+         // button.appendChild(option);
+       })
+       .catch(function(error) {
+         console.log(error);
+       })
+    // }
 }
 
-getRecipeData();
+function addQuerySelector() {
+    var btnId = "";
+    for (var i = 0; i < nodeList.length; i++) {
+      btnId = nodeList[i].id;
+      //document.getElementById(btnId).addEventListener("click", addOptions());
+    }
+}
+
+document.getElementById("MainCourse").addEventListener("click", addOptions);
