@@ -4,9 +4,59 @@
   background-attachment: fixed;
   background-position: 100%;
   text-align: center;
+  color : #ffffff
 }
 
 .title {
   font-size: 110px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.container {
+  max-width: 80%;
+  height: 285px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.sentence {
+  font-size: 50px;
+  font-family: 'Indie Flower', cursive;
+
+}
+
+.menu {
+  font-size: 25px;
+}
+
+.line1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.line2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.MainCurse {
+  background-color: inherit;
   color : #ffffff
+  width: auto;
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+
+}
+
+.Copyrights {
+  font-size: 22px;
+  font-family: 'Indie Flower', cursive;
 }
