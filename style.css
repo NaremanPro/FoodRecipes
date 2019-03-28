@@ -28,33 +28,74 @@
 .sentence {
   font-size: 50px;
   font-family: 'Indie Flower', cursive;
-
+  height: auto;
 }
 
 .menu {
   font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  border: solid #ffffff 0px;
+  width: 75%;
+  height: 90px;
+  position: center;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10%;
+  /* padding-left: 10%; */
 }
 
-.line1 {
+.Soups {
+  width: 200px;
+}
+
+.MainCourse {
+    width: 200px;
+    margin-left: 10%;
+}
+
+.Breakfast {
+  width: 200px;
+}
+
+.Desserts {
+  width: 200px;
+}
+
+.Salads {
+  width: 200px;
+}
+/* .menu.column {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.menu.column:nth-of-type(2) {
+  align-self: center;
+} */
+/* .line1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 60px;
+  border: 0px solid none;
+  float: center;
 }
 
 .line2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
+  font-size: 45px;
+  float: center;
+} */
 
-.MainCurse {
-  background-color: inherit;
+/* .MainCurse {
+  background-color: none;
   color : #ffffff
-  width: auto;
-  font-size: 30px;
   font-family: 'Indie Flower', cursive;
-
-}
+} */
 
 .Copyrights {
   font-size: 22px;
